@@ -42,7 +42,7 @@ class HomeActivity : BaseActivity(), HomeView {
     }
 
     override fun showErrorMessage() {
-        var errorSnackBar = Snackbar.make(coordinatorLayout, "Please enter github account name", Snackbar.LENGTH_LONG)
+        var errorSnackBar = Snackbar.make(coordinatorLayout, R.string.please_enter_github_name, Snackbar.LENGTH_LONG)
         errorSnackBar.view.setBackgroundColor(Color.RED)
         errorSnackBar.show()
     }
