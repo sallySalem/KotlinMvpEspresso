@@ -10,5 +10,5 @@ import javax.inject.Singleton
 @Singleton
 @Component(modules = arrayOf(AppModule::class))
 interface AppComponent {
-   // fun inject(splashActivity: SplashActivity)
+    fun inject(splashActivity: SplashActivity)
 }
