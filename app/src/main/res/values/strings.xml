@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">KotlinMvpEspresso</string>
+    <string name="please_enter_github_name">Please enter github name :</string>
+    <string name="show_repositories_list">Show Repositories List</string>
 </resources>

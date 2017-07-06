@@ -1,7 +1,5 @@
 package com.example.kotlinmvpespresso.ui.splash
 
-import android.support.v7.app.AppCompatActivity
-import android.os.Bundle
 import com.example.kotlinmvpespresso.R
 import com.example.kotlinmvpespresso.TestApplication
 import com.example.kotlinmvpespresso.ui.base.BaseActivity
