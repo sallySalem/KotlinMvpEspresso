@@ -1,7 +1,8 @@
-package com.example.kotlinmvpespresso
+package com.example.kotlinmvpespresso.ui.splash
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import com.example.kotlinmvpespresso.R
 
 class SplashActivity : AppCompatActivity() {
 
