@@ -6,5 +6,8 @@
 
     <color name="text_black">#333333</color>
     <color name="text_blue">#2f72a6</color>
+
+    <color name="green_item_bg">#885a842e</color>
+    <color name="red_item_bg">#88d14646</color>
     <color name="red_owner_bg">#88d0aaaa</color>
 </resources>

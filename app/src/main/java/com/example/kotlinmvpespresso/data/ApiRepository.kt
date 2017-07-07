@@ -29,11 +29,6 @@ constructor(gson: Gson) {
         return repositoriesService.getRepositoriesList(gitHubAccountName)
     }
 
-    fun getRepositoryOwner(loginName: String): Call<OwnerModel> {
-        val repositoriesService = service.create(RepositoriesService::class.java)
-        return repositoriesService.getRepositoryOwner(loginName)
-    }
-
     companion object {
         val BASE_URL = "https://api.github.com/"
     }

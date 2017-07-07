@@ -17,9 +17,4 @@ constructor(private val repository: ApiRepository) {
         val callResponse = repository.getRepositoriesList(gitHubAccountName)
         callResponse.enqueue(repositoriesListCallback)
     }
-
-    fun getRepositoryOwnerDetails(loginName: String, repositoryOwnerCallback: Callback<OwnerModel>) {
-        val callResponse = repository.getRepositoryOwner(loginName)
-        callResponse.enqueue(repositoryOwnerCallback)
-    }
 }
