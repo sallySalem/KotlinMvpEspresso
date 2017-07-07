@@ -4,4 +4,11 @@
     <string name="show_repositories_list">Show Repositories List</string>
     <string name="no_data_available">No data available</string>
     <string name="mesg_server_error">Server Error</string>
+    <string name="repository_details">Details</string>
+    <string name="repository_name">Name:</string>
+    <string name="repository_description">Description:</string>
+    <string name="programming_language">Language:</string>
+    <string name="is_fork">Is Fork:</string>
+    <string name="last_time_updated">Last time updated:</string>
+    <string name="repository_owner_details">Repository owner details:</string>
 </resources>

@@ -7,5 +7,55 @@
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
     </style>
+    <style name="activityStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:background">@drawable/background</item>
+    </style>
+    <style name="Theme.AppCompat.Light.NoActionBar.FullScreen" parent="@style/Theme.AppCompat.Light">
+        <item name="windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
 
+    <style name="TextAppearance.Size14.black" parent="@android:style/TextAppearance.Medium">
+        <item name="android:textColor">@color/text_black</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="TextAppearance.Size14.black.bold">
+        <item name="android:textStyle">bold</item>
+        <item name="android:layout_marginTop">5dp</item>
+    </style>
+
+    <style name="TextAppearance.Size14.white" parent="@android:style/TextAppearance.Medium">
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="TextAppearance.Size14.white.bold">
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="TextAppearance.Size14.blue" parent="@android:style/TextAppearance.Medium">
+        <item name="android:textColor">@color/text_blue</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="TextAppearance.Size12.black" parent="@android:style/TextAppearance.Medium">
+        <item name="android:textColor">@color/text_black</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="TextAppearance.Size12.blue" parent="@android:style/TextAppearance.Medium">
+        <item name="android:textColor">@color/text_blue</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="TextAppearance.Size18.red" parent="@android:style/TextAppearance.Large">
+        <item name="android:textColor">@color/colorPrimary</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
 </resources>

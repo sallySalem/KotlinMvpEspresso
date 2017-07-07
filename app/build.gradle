@@ -42,6 +42,8 @@ dependencies {
 
     compile "com.android.support:recyclerview-v7:25.4.0"
 
+    compile 'com.squareup.picasso:picasso:2.5.2'
+
     androidTestCompile 'com.android.support.test.espresso:espresso-core:2.2.2'
     androidTestCompile 'com.android.support.test.espresso:espresso-intents:2.2.2'
     androidTestCompile 'com.android.support.test:runner:0.5'

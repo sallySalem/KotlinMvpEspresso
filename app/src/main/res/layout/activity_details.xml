@@ -1,0 +1,123 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/activityStyle">
+
+    <LinearLayout
+        android:id="@+id/rl_item_container"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="@dimen/default_item_margin"
+        android:baselineAligned="false"
+        android:orientation="vertical"
+        android:padding="@dimen/default_item_padding">
+
+        <TextView
+            android:id="@+id/tv_repository_details"
+            style="@style/TextAppearance.Size18.red"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/repository_details" />
+
+        <!-- Repository Name -->
+        <TextView
+            style="@style/TextAppearance.Size14.black.bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/repository_name" />
+
+        <TextView
+            android:id="@+id/tv_repository_name_details"
+            style="@style/TextAppearance.Size14.black"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <!-- Repository Description -->
+        <TextView
+            style="@style/TextAppearance.Size14.black.bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/repository_description" />
+
+        <TextView
+            android:id="@+id/tv_repository_description_details"
+            style="@style/TextAppearance.Size14.black"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <!-- Repository programming language -->
+        <TextView
+            style="@style/TextAppearance.Size14.black.bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:text="@string/programming_language" />
+
+        <TextView
+            android:id="@+id/tv_repository_language"
+            style="@style/TextAppearance.Size14.black"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <!-- Owner Details -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/default_item_margin"
+            android:padding="@dimen/default_item_padding"
+            android:background="@color/red_owner_bg">
+
+            <TextView
+                android:id="@+id/tv_owner_details"
+                style="@style/TextAppearance.Size18.red"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:text="@string/repository_owner_details"
+                android:layout_alignParentStart="true" />
+
+            <ImageView
+                android:id="@+id/iv_owner_avatar"
+                android:layout_width="@dimen/owner_avatar_width"
+                android:layout_height="@dimen/owner_avatar_height"
+                android:layout_marginTop="@dimen/details_margin_top"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/tv_owner_details" />
+
+            <TextView
+                android:id="@+id/tv_owner_name"
+                style="@style/TextAppearance.Size14.black"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/iv_owner_avatar"
+                android:layout_marginStart="@dimen/default_item_margin"
+                android:layout_toEndOf="@+id/iv_owner_avatar" />
+
+            <TextView
+                android:id="@+id/tv_owner_blog"
+                style="@style/TextAppearance.Size14.blue"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_owner_name"
+                android:layout_toEndOf="@+id/iv_owner_avatar"
+                android:layout_alignStart="@+id/tv_owner_name" />
+
+            <TextView
+                android:id="@+id/tv_empty_data"
+                style="@style/TextAppearance.Size14.black.bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_owner_details"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+                android:text="@string/no_data_available"
+                android:visibility="gone" />
+
+            <ProgressBar
+                android:id="@+id/pb_owner_data"
+                style="?android:attr/progressBarStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_owner_details"
+                android:layout_centerHorizontal="true" />
+        </RelativeLayout>
+    </LinearLayout>
+</ScrollView>

@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <dimen name="default_item_margin">10dp</dimen>
-    <dimen name="default_item_padding">5dp</dimen>
+    <!-- list -->
+    <dimen name="default_item_margin">5dp</dimen>
+    <dimen name="default_item_padding">10dp</dimen>
+
+    <!-- details -->
+    <dimen name="owner_avatar_width">100dp</dimen>
+    <dimen name="owner_avatar_height">100dp</dimen>
+    <dimen name="details_margin_top">10dp</dimen>
 </resources>

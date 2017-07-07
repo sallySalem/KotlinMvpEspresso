@@ -81,7 +81,7 @@ class HomeActivityTest {
 
         onView(allOf(withId(R.id.but_show_repositories), withText(R.string.show_repositories_list), isDisplayed())).perform(click())
 
-        Intents.intended(IntentMatchers.hasComponent(RepositoriesListActivity::class.java!!.getName()))
+        Intents.intended(IntentMatchers.hasComponent(RepositoriesListActivity::class.java.name))
 
         Intents.intended(IntentMatchers.hasExtra(Constants.KEY_GIT_HUB_ACCOUNT_MODEL, gitHubAccountTest));
     }

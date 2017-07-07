@@ -8,15 +8,24 @@ import com.google.gson.annotations.SerializedName
  * Created by sally on 7/7/17.
  */
 data class OwnerModel(@SerializedName("id")
-                      var id: Int, @SerializedName("login")
-                      var login: String?, @SerializedName("avatar_url")
-                      var avatarUrl: String?, @SerializedName("gravatar_id")
-                      var gravatarId: String?, @SerializedName("url")
-                      var url: String?, @SerializedName("type")
-                      var type: String?, @SerializedName("site_admin")
-                      var siteAdmin: Boolean, @SerializedName("name")
-                      var ownerName: String?, @SerializedName("blog")
-                      var ownerBlog: String?, @SerializedName("email")
+                      var id: Int,
+                      @SerializedName("login")
+                      var login: String?,
+                      @SerializedName("avatar_url")
+                      var avatarUrl: String?,
+                      @SerializedName("gravatar_id")
+                      var gravatarId: String?,
+                      @SerializedName("url")
+                      var url: String?,
+                      @SerializedName("type")
+                      var type: String?,
+                      @SerializedName("site_admin")
+                      var siteAdmin: Boolean,
+                      @SerializedName("name")
+                      var ownerName: String?,
+                      @SerializedName("html_url")
+                      var ownerBlog: String?,
+                      @SerializedName("email")
                       var ownerEmail: String?) : Parcelable {
 
     constructor(parcel: Parcel) : this(0, null, null, null, null, null, false, null, null, null) {

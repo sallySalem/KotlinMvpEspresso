@@ -1,5 +1,6 @@
 package com.example.kotlinmvpespresso.di
 
+import com.example.kotlinmvpespresso.ui.details.DetailsActivity
 import com.example.kotlinmvpespresso.ui.home.HomeActivity
 import com.example.kotlinmvpespresso.ui.repositoriesList.RepositoriesListActivity
 import com.example.kotlinmvpespresso.ui.splash.SplashActivity
@@ -17,4 +18,6 @@ interface AppComponent {
     fun inject(homeActivity: HomeActivity)
 
     fun inject(repositoryListActivity: RepositoriesListActivity)
+
+    fun inject(detailsActivity: DetailsActivity)
 }
