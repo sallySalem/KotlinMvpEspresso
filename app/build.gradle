@@ -37,6 +37,11 @@ dependencies {
     kapt 'com.google.dagger:dagger-compiler:2.9'
     compile "com.google.code.gson:gson:2.7"
 
+    compile "com.squareup.retrofit2:retrofit:2.0.2"
+    compile "com.squareup.retrofit2:converter-gson:2.0.2"
+
+    compile "com.android.support:recyclerview-v7:25.4.0"
+
     androidTestCompile 'com.android.support.test.espresso:espresso-core:2.2.2'
     androidTestCompile 'com.android.support.test.espresso:espresso-intents:2.2.2'
     androidTestCompile 'com.android.support.test:runner:0.5'

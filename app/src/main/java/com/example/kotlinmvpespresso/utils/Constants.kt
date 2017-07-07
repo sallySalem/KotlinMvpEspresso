@@ -6,4 +6,5 @@ package com.example.kotlinmvpespresso.utils
 object Constants {
     val SPLASH_TIME : Long = 3000
     val KEY_GIT_HUB_ACCOUNT_MODEL = "key_git_hub_account_name"
+    val KEY_REPOSITORY_MODEL = "key_repository_model"
 }
