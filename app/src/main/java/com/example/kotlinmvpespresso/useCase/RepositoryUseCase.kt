@@ -10,11 +10,15 @@ import javax.inject.Inject
 /**
  * Created by sally on 7/7/17.
  */
-class RepositoryUseCase @Inject
-constructor(private val repository: ApiRepository) {
+open class RepositoryUseCase @Inject
+constructor(val repository: ApiRepository) {
 
-    fun getRepositoriesList(gitHubAccountName: String, repositoriesListCallback: Callback<ArrayList<RepositoryModel>>) {
+    open fun getRepositoriesList(gitHubAccountName: String, repositoriesListCallback: Callback<ArrayList<RepositoryModel>>) {
         val callResponse = repository.getRepositoriesList(gitHubAccountName)
         callResponse.enqueue(repositoriesListCallback)
+    }
+
+    fun getTest() {
+        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
     }
 }

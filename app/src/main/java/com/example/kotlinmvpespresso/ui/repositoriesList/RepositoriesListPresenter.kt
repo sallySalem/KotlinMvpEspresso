@@ -38,12 +38,19 @@ class RepositoriesListPresenter @Inject constructor(val repositoryUseCase: Repos
     fun onItemClick(position: Int) {
         view?.navigateToRepositoryDetails(repositoriesList[position])
     }
-    private fun getRepositoriesList() {
+
+    fun getRepositoriesList() {
         //Call backend to get repositories list
         repositoryUseCase.getRepositoriesList(gitHubAccountName, repositoriesListCallback)
+        TestFunc()
     }
 
-    private val repositoriesListCallback = object : Callback<ArrayList<RepositoryModel>> {
+    private fun TestFunc() {
+        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+        repositoryUseCase.getTest()
+    }
+
+    val repositoriesListCallback = object : Callback<ArrayList<RepositoryModel>> {
         override fun onResponse(call: Call<ArrayList<RepositoryModel>>, response: retrofit2.Response<ArrayList<RepositoryModel>>) {
             view?.hideSwipeRefreshLayout()
             if (response.isSuccessful) {

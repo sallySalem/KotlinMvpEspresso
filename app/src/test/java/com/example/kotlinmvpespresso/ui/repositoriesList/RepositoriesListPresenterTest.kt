@@ -6,17 +6,16 @@ import com.example.kotlinmvpespresso.useCase.RepositoryUseCase
 import com.example.kotlinmvpespresso.utils.Constants
 import org.junit.Before
 import org.junit.Test
-import org.mockito.ArgumentMatchers
-import org.mockito.Mock
-import org.mockito.Mockito
+import org.mockito.*
 import org.mockito.Mockito.*
-import org.mockito.MockitoAnnotations
 import org.mockito.invocation.InvocationOnMock
 import org.mockito.stubbing.Answer
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 import java.util.ArrayList
+import org.mockito.Mockito
+
 
 /**
  * Created by Sally on 19/11/2017.
@@ -29,19 +28,22 @@ class RepositoriesListPresenterTest {
     @Mock
     lateinit var mockBundle: Bundle
     @Mock
-    internal lateinit var mockCall:retrofit2.Call<*>
+    internal lateinit var mockCall: retrofit2.Call<ArrayList<RepositoryModel>>
+    @Mock
+    internal lateinit var mockCallback: Callback<ArrayList<RepositoryModel>>
     @Mock
     internal lateinit var mockThrowable: Throwable
     @Mock
     lateinit var repositoryUseCase: RepositoryUseCase
+    val repoName: String = "testRepo"
 
     @Before
     fun setUp() {
         MockitoAnnotations.initMocks(this)
         repositoriesListPresenter = RepositoriesListPresenter(repositoryUseCase)
-        repositoriesListPresenter?.view = repositoriesListView
+        repositoriesListPresenter.view = repositoriesListView
 
-        `when`(mockBundle.getString(Constants.KEY_GIT_HUB_ACCOUNT_MODEL)).thenReturn("test")
+        `when`(mockBundle.getString(Constants.KEY_GIT_HUB_ACCOUNT_MODEL)).thenReturn(repoName)
     }
 
     @Test
@@ -56,15 +58,16 @@ class RepositoriesListPresenterTest {
 //                return null
 //            }
 //        }).`when`(repositoryUseCase).getRepositoriesList(ArgumentMatchers.anyString(), ArgumentMatchers.any<Any>() as Callback<ArrayList<RepositoryModel>>)
+//
+//        Mockito.doAnswer {
+//            val callback = it.arguments[0] as Callback<ArrayList<RepositoryModel>>
+//            val repositoriesListModel = ArrayList<RepositoryModel>();
+//            val response = retrofit2.Response.success<ArrayList<RepositoryModel>>(repositoriesListModel)
+//            callback.onResponse(mockCall, response)
+//            null
+//        }.`when`(repositoryUseCase).getRepositoriesList(repoName, mockCallback)
 
-        Mockito.doAnswer {
-            val callback = it.arguments[0] as Callback<ArrayList<RepositoryModel>>
-            val repositoriesListModel = ArrayList<RepositoryModel>();
-            val response = retrofit2.Response.success<ArrayList<RepositoryModel>>(repositoriesListModel)
-            callback.onResponse(mockCall as Call<ArrayList<RepositoryModel>>, response)
-            null
-        }.`when`(repositoryUseCase).getRepositoriesList(ArgumentMatchers.anyString(), ArgumentMatchers.any<Any>() as Callback<ArrayList<RepositoryModel>>)
-
+//        `when`(repositoryUseCase.getRepositoriesList(repoName, mockCallback)).thenReturn(mockCall as Call<ArrayList<RepositoryModel>>)
         repositoriesListPresenter.initialize(mockBundle)
         verify<RepositoriesListView>(repositoriesListView).hideRepositoriesList()
     }
